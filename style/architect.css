@@ -12,6 +12,10 @@
     display: flex;
 }
 
+.text-primary {
+    color: #FF900E;
+}
+
 .text-gray {
     color: #424242;
 }
@@ -24,15 +28,28 @@
     background-color: rgba(255, 144, 14, 0.1);
 }
 
-.btn-primary{
-background-color: #FF900E;
-color: #FFFFFF;
-padding: 21px 25px;
-border: none;
-border-radius: 8px;
-font-size: 1.25rem;
-font-weight: 600;
+.btn-primary {
+    background-color: #FF900E;
+    color: #FFFFFF;
+    padding: 21px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* transition: background-color 0.2s ease, transform 0.2s ease; */
 }
+
+/* .btn-primary:hover{
+transform:translate(-2px) ;
+background-color:#688605;
+} */
+
+main {
+    max-width: 1318px;
+    margin: 0 auto;
+}
+
 /* header styles */
 
 /* navbar related styles */
@@ -67,7 +84,7 @@ font-weight: 600;
     max-width: 860px;
     margin: 0 auto;
     text-align: center;
-margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .banner-title {
@@ -75,16 +92,69 @@ margin-bottom: 50px;
     font-weight: bold;
     color: #131313;
 }
-.banner-des{
-font-size: 1rem;
-line-height: 26px;
-margin-bottom: 32px;
+
+.banner-des {
+    font-size: 1rem;
+    line-height: 26px;
+    margin-bottom: 32px;
 }
-.banner-img{
-width: 100%;
+
+.banner-img {
+    width: 100%;
+    padding-bottom: 46px;
 }
+
+/* teams and features */
+.teams {
+    margin-top: 85px;
+    align-items: center;
+}
+
+.team-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.our-feature {
+    margin-left: 73px;
+    max-width: 537px;
+}
+
+.feature-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+#quick-list {
+    font-weight: 500;
+}
+
+.feature-des {
+    margin-bottom: 32px;
+}
+
 @media screen and (max-width: 576px) {
-    .navbar,.nav-links{
+
+    .navbar,
+    .nav-links,
+    .teams{
+    flex-direction: column;
+}
+.team-img{
+grid-template-columns: repeat(1,1fr);
+}
+.our-feature{
+margin-left: 20px;
+}
+}
+
+/* medium size device */
+@media screen and (min-width:576px) and  (max-width:992px) {
+.teams{
 flex-direction: column;
+}
+.our-feature {
+    margin-left: 50px auto;
 }
 }
